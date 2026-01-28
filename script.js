@@ -46,7 +46,6 @@
 
   const obs = new IntersectionObserver(
     (entries) => {
-      // pick the most visible intersecting section
       const visible = entries
         .filter((e) => e.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
