@@ -3,234 +3,138 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="MVT-25 – Digitale, personenspezifische Schusserfassung und Munitionsverwaltung." />
-  <title>MVT-25 – Munitionsverwaltung & Schusserfassung</title>
-
+  <title>MVT-25 – Digitale Schusserfassung</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="MVT-25 Start">
-        <span class="brand-mark" aria-hidden="true">MVT-25</span>
-        <span class="brand-dot" aria-hidden="true">⦿</span>
-      </a>
 
-      <nav class="nav" aria-label="Hauptnavigation">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
-          Menü
-        </button>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#problem">Problem</a></li>
-          <li><a href="#loesung">Lösung</a></li>
-          <li><a href="#zielgruppen">Zielgruppen</a></li>
-          <li><a href="#prozess">Produktionsprozess</a></li>
-          <li><a href="#team">Team</a></li>
-        </ul>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">MVT-25</div>
+    <nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#projekt">Projekt</a></li>
+        <li><a href="#loesung">Lösung</a></li>
+        <li><a href="#prozess">Produktion</a></li>
+        <li><a href="#prototyp">Prototyp</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#zahlen">Zahlen</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>MVT-25</h1>
+      <p class="lead">Digitale, personenspezifische Erfassung von Schussabgaben</p>
+      <p>Automatisiertes System zur Munitionsverwaltung für Militär und Schiessstände.</p>
     </div>
-  </header>
+    <img src="assets/3d-modell.jpg" alt="3D Modell">
+  </div>
+</section>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="kicker">Präzision • Effizienz • Sicherheit</p>
-          <h1>MVT-25 – digitale Schusserfassung & Munitionsverwaltung</h1>
-          <p class="lead">
-            MVT-25 ersetzt manuelle, fehleranfällige Dokumentation durch eine automatisierte, personenspezifische
-            Erfassung jeder Schussabgabe – mit zentraler Auswertung und revisionssicherer Historie.
-          </p>
+<section id="projekt" class="section">
+  <div class="container grid-2">
+    <img src="assets/ki-bild.jpg" alt="KI Visualisierung">
+    <div>
+      <h2>Projektidee</h2>
+      <p>
+        Das MVT-25 ist ein modulares Hardware- und Softwaresystem zur automatischen Erfassung
+        von Schussabgaben. Ziel ist es, manuelle und fehleranfällige Prozesse durch digitale,
+        nachvollziehbare Abläufe zu ersetzen.
+      </p>
+    </div>
+  </div>
+</section>
 
-          <div class="hero-cta">
-            <a class="btn primary" href="#prozess">Produktionsprozess ansehen</a>
-            <a class="btn ghost" href="#loesung">Wie es funktioniert</a>
-          </div>
+<section id="loesung" class="section alt">
+  <div class="container grid-2">
+    <div>
+      <h2>Unsere Lösung</h2>
+      <ul>
+        <li>Sensor direkt an der Waffe</li>
+        <li>Automatische Datenerfassung</li>
+        <li>Zentrale Auswertung</li>
+        <li>Personenspezifische Zuordnung</li>
+      </ul>
+    </div>
+    <img src="assets/prototyp-live1.png" alt="Prototyp">
+  </div>
+</section>
 
-          <div class="badges" aria-label="Highlights">
-            <span class="badge">Personenspezifisch</span>
-            <span class="badge">Automatisiert</span>
-            <span class="badge">Skalierbar</span>
-            <span class="badge">Web-Auswertung</span>
-          </div>
-        </div>
+<section id="prozess" class="section">
+  <div class="container">
+    <h2>Produktionsprozess</h2>
+    <img src="assets/prozess.png" alt="Produktionsprozess">
+    <p>
+      Der Produktionsprozess umfasst die Entwicklung, Fertigung, Montage und Endprüfung
+      der MVT-25 Komponenten. Hardware und Software werden dabei eng aufeinander abgestimmt.
+    </p>
+  </div>
+</section>
 
-        <div class="hero-card" role="img" aria-label="Projekt-Vorschau">
-          <!-- Optional: ersetze hero.jpg durch euer Bild -->
-          <img src="assets/hero.jpg" alt="MVT-25 Vorschau (optional)" onerror="this.style.display='none'">
-          <div class="hero-card-fallback">
-            <h3>Was ist MVT-25?</h3>
-            <p>
-              Ein modulares System aus Hardware und Software zur zuverlässigen Erfassung und Auswertung von Schussdaten.
-            </p>
-            <ul>
-              <li>Erfasst Schussabgaben automatisch</li>
-              <li>Ordnet Daten Personen/Events zu</li>
-              <li>Erstellt Berichte und Historie</li>
-            </ul>
-          </div>
-        </div>
+<section id="prototyp" class="section alt">
+  <div class="container grid-2">
+    <img src="assets/prototyp-live2.png" alt="Prototyp im Einsatz">
+    <div>
+      <h2>Prototyp</h2>
+      <p>
+        Erste funktionale Prototypen wurden entwickelt und getestet. Die Bilder zeigen
+        den aktuellen Entwicklungsstand im praktischen Einsatz.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="zahlen" class="section">
+  <div class="container grid-2">
+    <div>
+      <h2>Fakten & Kalkulation</h2>
+      <p>Übersicht über Wirtschaftlichkeit und Projektkennzahlen.</p>
+    </div>
+    <img src="assets/kalkulation.png" alt="Kalkulation">
+  </div>
+  <div class="container grid-2">
+    <img src="assets/fact-sheet.jpg" alt="Fact Sheet">
+    <div>
+      <p>
+        Das Fact Sheet fasst die wichtigsten technischen und wirtschaftlichen Eckdaten
+        des Projekts kompakt zusammen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section alt">
+  <div class="container">
+    <h2>Team</h2>
+    <div class="grid-3">
+      <div class="card">
+        <img src="assets/jonas.jpg">
+        <p>Jonas – Antreiber</p>
       </div>
-    </section>
-
-    <section id="problem" class="section">
-      <div class="container">
-        <h2>Welches Problem lösen wir?</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Heute</h3>
-            <ul>
-              <li>Manuelle Listen, Schätzungen und Vertrauen</li>
-              <li>Fehler bei Ausgabe/Rückgabe von Munition</li>
-              <li>Aufwändige Nachverfolgung bei Unklarheiten</li>
-              <li>Kaum aussagekräftige Daten für Ausbildung</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Morgen mit MVT-25</h3>
-            <ul>
-              <li>Automatische, eindeutige Erfassung pro Person</li>
-              <li>Transparente Bestände und klare Verantwortlichkeit</li>
-              <li>Schnelle Auswertungen und Reports</li>
-              <li>Mehr Sicherheit und weniger Administrationsaufwand</li>
-            </ul>
-          </div>
-        </div>
+      <div class="card">
+        <img src="assets/peter.png">
+        <p>Peter – Spezialist</p>
       </div>
-    </section>
-
-    <section id="loesung" class="section alt">
-      <div class="container">
-        <h2>Unsere Lösung</h2>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Hardwarepaket</h3>
-            <p>Sensorsuite, Halterung/Gehäuse und Zubehör – robust für den Einsatz.</p>
-          </div>
-          <div class="card">
-            <h3>Software</h3>
-            <p>Erfassung, Speicherung, Auswertung und Berichte – zentral und übersichtlich.</p>
-          </div>
-          <div class="card">
-            <h3>Services</h3>
-            <p>Setup, Kalibrierung, Schulung, Wartung und Ersatzteile als klare Optionen.</p>
-          </div>
-        </div>
-
-        <div class="callout">
-          <h3>Warum funktioniert das?</h3>
-          <p>
-            Weil MVT-25 den Ablauf nicht komplizierter macht: Die Erfassung läuft im Hintergrund,
-            Daten werden zentral verarbeitet und über ein Web-Interface einfach ausgewertet.
-          </p>
-        </div>
+      <div class="card">
+        <img src="assets/flück.png">
+        <p>Niklas – Vernetzer</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="zielgruppen" class="section">
-      <div class="container">
-        <h2>Zielgruppen & Markt</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Schweizer Militär</h3>
-            <p>
-              Unterstützung von Ausbildung und Logistik durch präzise Nachvollziehbarkeit, Transparenz und
-              effizientere Prozesse bei Ausgabe/Verbrauch.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Schweizer Schiessstände & Vereine</h3>
-            <p>
-              Weniger Administration, weniger Fehler, bessere Übersicht – ohne den Betrieb zu verlangsamen.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+<footer class="site-footer">
+  <div class="container">
+    <p>© MVT-25 Projekt</p>
+  </div>
+</footer>
 
-    <section id="prozess" class="section alt">
-      <div class="container">
-        <h2>Produktionsprozess</h2>
-        <p class="lead">
-          So entsteht das MVT-25 – von Planung über Fertigung bis zur Endprüfung und Auslieferung.
-        </p>
-
-        <div class="process-wrap">
-          <!-- Lege deine Grafik als assets/process.png ab -->
-          <img class="process-img" src="assets/process.png" alt="Produktionsprozess MVT-25" />
-          <div class="process-steps">
-            <ol>
-              <li><strong>Konzept & Planung</strong> – Anforderungen, CAD, Komponenten</li>
-              <li><strong>Elektronikfertigung</strong> – Platinen, Programmierung, Tests</li>
-              <li><strong>Mechanische Fertigung</strong> – Gehäuse, Halterung, Dichtungen</li>
-              <li><strong>Zusammenbau</strong> – Montage, Verkabelung, Funktionscheck</li>
-              <li><strong>Softwareintegration</strong> – Firmware, App/Backend, Updates</li>
-              <li><strong>Endprüfung</strong> – Simulation, Belastung, Datenübertragung</li>
-              <li><strong>Verpackung & Logistik</strong> – Zubehör, Registrierung, Versand</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Unterstützende Dienste</h3>
-            <ul>
-              <li>Support & Wartung (Garantie, Ersatzteile, Fehleranalyse)</li>
-              <li>Cloud/Hosting (Daten, Sicherheit, Updates)</li>
-              <li>Qualitätsmanagement (Prüfprotokolle, Seriennummern)</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Partner-Ökosystem</h3>
-            <ul>
-              <li>Elektronikfertiger (Sensorik, Leiterplatten)</li>
-              <li>Metallbau / Gehäuse (robuste Bauteile)</li>
-              <li>Logistikpartner (Versand, Ersatzteile)</li>
-              <li>Integrationspartner (Einrichtung, Schulung)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="section">
-      <div class="container">
-        <h2>Team</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Rollen</h3>
-            <ul>
-              <li><strong>Specialist</strong> – Fachwissen & technische Tiefe</li>
-              <li><strong>Shaper</strong> – Tempo, Entscheidungen, Umsetzung</li>
-              <li><strong>Implementer</strong> – Struktur, Planung, Zuverlässigkeit</li>
-              <li><strong>Resource Investigator</strong> – Netzwerk, Partner, Möglichkeiten</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Werte</h3>
-            <ul>
-              <li>Zuverlässigkeit</li>
-              <li>Transparenz</li>
-              <li>Verantwortung</li>
-              <li>Effizienz</li>
-              <li>Respekt & Zusammenarbeit</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> MVT-25 • Projektseite auf GitHub Pages</p>
-        <p class="small">
-          Hinweis: Diese Seite ist eine Projektpräsentation und stellt keine Kauf- oder Einsatzanleitung dar.
-        </p>
-      </div>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
+</main>
 </body>
 </html>
