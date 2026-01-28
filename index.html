@@ -1,137 +1,311 @@
 <!doctype html>
 <html lang="de">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MVT-25: Digitale, personenspezifische Erfassung von Schussabgaben – automatisierte Munitionsverwaltung für Militär und Schiessstände." />
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>MVT 25 – Projekt-Dokumentation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<script defer src="js/main.js"></script>
+  <title>MVT-25</title>
 
-<meta name="description" content="MVT 25 – moderne, docs-mässige Projektseite mit Galerie, Team und Downloads.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="MVT-25" />
+  <meta property="og:description" content="Digitale Erfassung von Schussabgaben & automatisierte Munitionsverwaltung." />
+  <!-- Optional: eigenes OG Bild -->
+  <!-- <meta property="og:image" content="assets/ki-bild.jpg" /> -->
 
-<meta name="description" content="MVT 25 – Docs-mässige Projektdokumentation (Sensorik, Backend, Visualisierung).">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-<header class="topbar">
-  <a class="brand" href="index.html" aria-label="Startseite">
-    <span class="brand__dot" aria-hidden="true"></span>
-    <span class="brand__text">MVT&nbsp;25</span>
-    <span class="brand__sub">Docs</span>
-  </a>
+  <a class="skip" href="#projekt">Zum Inhalt springen</a>
 
-  <button class="icon-btn topbar__menu" data-menu-toggle aria-label="Menü öffnen">
-    <span class="icon-btn__bars" aria-hidden="true"></span>
-  </button>
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Zur Startsektion">
+        <span class="brand__mark">MVT</span>
+        <span class="brand__text">MVT-25</span>
+      </a>
 
-  <nav class="topnav" data-topnav>
-    <a href="pages/dokumentation.html">Dokumentation</a>
-    <a href="pages/galerie.html">Galerie</a>
-    <a href="pages/team.html">Team</a>
-    <a href="pages/downloads.html">Downloads</a>
-    <button class="icon-btn" data-theme-toggle aria-label="Theme wechseln" title="Theme wechseln">
-      <span class="icon-btn__sun" aria-hidden="true"></span>
-      <span class="icon-btn__moon" aria-hidden="true"></span>
-    </button>
-  </nav>
-</header>
+      <button class="nav__toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
 
-<main class="container">
-  <section class="hero">
-    <div class="hero__grid">
-      <div class="card">
-        <div class="card__inner">
-          <h1 class="h-title">MVT&nbsp;25 · Projekt-Dokumentation</h1>
-          <p class="h-sub"><strong>Thematik:</strong> Entwicklung eines kostengünstigen Prototyps zur Erkennung von abgegebenen Schüssen bei Airsoft-, Paintball- und Trainingswaffen. Das System soll Daten in Echtzeit erfassen, verarbeiten und visuell aufbereiten.</p>
-          <p class="h-sub" style="margin-top:-6px"><strong>Ausgangslage:</strong> Bis dato gab es keine offene, standardisierte oder bezahlbare Lösung zur Schusserkennung.Vorhandene Systeme waren entweder manuell, zu ungenau oder sehr kostenintensiv.</p>
+      <nav class="nav" id="nav" aria-label="Hauptnavigation">
+        <a class="nav__link" href="#projekt">Projekt</a>
+        <a class="nav__link" href="#loesung">Lösung</a>
+        <a class="nav__link" href="#produktion">Produktion</a>
+        <a class="nav__link" href="#prototyp">Prototyp</a>
+        <a class="nav__link" href="#team">Team</a>
+        <a class="nav__link" href="#zahlen">Zahlen</a>
+      </nav>
+    </div>
+  </header>
 
-          <div class="badges" aria-label="Kurzinfo">
-            <span class="badge"><i aria-hidden="true"></i> Raspberry Pi Pico W</span>
-            <span class="badge"><i aria-hidden="true"></i> FastAPI</span>
-            <span class="badge"><i aria-hidden="true"></i> InfluxDB</span>
-            <span class="badge"><i aria-hidden="true"></i> Dashboard</span>
-          </div>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">Hardware · Software · Prozess</p>
+          <h1>MVT-25: Digitale Schusserfassung & Munitionsverwaltung</h1>
+          <p class="lead">
+            Automatisiertes System zur personenspezifischen Erfassung von Schussabgaben – mit nachvollziehbarer Dokumentation,
+            weniger manuellen Fehlern und klaren Auswertungen.
+          </p>
 
-          <div class="btnrow">
-            <a class="btn btn--primary" href="pages/dokumentation.html">
-              Docs öffnen <span class="btn__arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="btn btn--ghost" href="pages/galerie.html">Galerie</a>
-            <a class="btn btn--ghost" href="pages/downloads.html">Downloads</a>
-          </div>
-
-          <div class="notice" style="margin-top:14px">
-            Diese Seite ist „docs-mässig“ aufgebaut: klare Kapitel, nachvollziehbarer Datenfluss, Ergebnisse & Reflexion.
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#loesung">Lösung ansehen</a>
+            <a class="btn btn--ghost" href="#prototyp">Prototyp</a>
           </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card__inner">
-          <figure class="figure" style="margin:0">
-            <img src="assets/prozess.png" alt="Prozessdiagramm">
-            <figcaption>Projektprozess (aus euren Assets).</figcaption>
+        <div class="hero__media">
+          <img
+            src="assets/ki-bild.jpg"
+            alt="KI-Visualisierung des MVT-25 Systems"
+            loading="eager"
+            width="1400"
+            height="1000"
+          />
+          <p class="caption">KI-Visualisierung</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKT -->
+    <section class="section" id="projekt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projekt</h2>
+          <p>
+            MVT-25 ermöglicht die digitale, personenspezifische Erfassung von Schussabgaben und reduziert den manuellen Aufwand
+            in der Munitionsverwaltung.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Problem</h3>
+            <p>Manuelle Erfassung ist fehleranfällig, zeitintensiv und schwer auditierbar.</p>
+          </article>
+          <article class="card">
+            <h3>Ziel</h3>
+            <p>Automatische, personenspezifische Erfassung von Schussabgaben mit sauberer Dokumentation.</p>
+          </article>
+          <article class="card">
+            <h3>Kontext</h3>
+            <p>Einsatz in militärischen Anwendungen und auf Schiessständen – robust & praxisnah.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LÖSUNG -->
+    <section class="section section--alt" id="loesung">
+      <div class="container">
+        <div class="section__head">
+          <h2>Unsere Lösung</h2>
+          <p>Modulares System aus Hardware & Software — Daten erfassen, nachvollziehen, auswerten.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Erfassung</h3>
+            <ul class="list">
+              <li>Personenspezifische Zuordnung</li>
+              <li>Automatische Schuss-/Ereigniserkennung</li>
+              <li>Robuste Datenerhebung</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Auswertung</h3>
+            <ul class="list">
+              <li>Übersichten & Kennzahlen</li>
+              <li>Nachvollziehbare Historie</li>
+              <li>Export/Reporting (optional)</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="media-grid">
+          <figure class="media">
+            <img src="assets/3d-modell.jpg" alt="3D-Modell des MVT-25 Systems" loading="lazy" width="1200" height="800" />
+            <figcaption>3D-Modell</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/ki-bild.jpg" alt="KI-Visualisierung des Systems im Einsatz" loading="lazy" width="1200" height="800" />
+            <figcaption>KI-Visualisierung</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/fact-sheet.jpg" alt="Fact Sheet Übersicht" loading="lazy" width="1200" height="800" />
+            <figcaption>Fact Sheet</figcaption>
           </figure>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <h2>Inhalt</h2>
-    <div class="grid3">
-      <article class="feature">
-        <h3>Überblick</h3>
-        <p>Kontext, Ausgangslage, Ziel und Aufgabenstellung.</p>
-        <p><a href="pages/dokumentation.html#ueberblick">Zum Kapitel →</a></p>
-      </article>
-      <article class="feature">
-        <h3>Architektur</h3>
-        <p>Datenfluss Sensor → Backend → Speicherung → Visualisierung.</p>
-        <p><a href="pages/dokumentation.html#architektur">Zum Kapitel →</a></p>
-      </article>
-      <article class="feature">
-        <h3>Ergebnisse</h3>
-        <p>Realisierung, Mittelbedarf, Tests, Ist/Soll und Fazit.</p>
-        <p><a href="pages/dokumentation.html#tests">Zum Kapitel →</a></p>
-      </article>
-    </div>
-  </section>
+    <!-- PRODUKTION -->
+    <section class="section" id="produktion">
+      <div class="container">
+        <div class="section__head">
+          <h2>Produktion</h2>
+          <p>Von Design → Herstellung → Qualität: transparent und nachvollziehbar.</p>
+        </div>
 
-  <section class="section">
-    <h2>Aufgabenstellung (Kurzfassung)</h2>
-    <div class="card">
-      <div class="card__inner">
-        <ul>
-  <li>Erfassen von Schussdaten mit Sensorik (Vibration, Bewegung, Lautstärke)</li>
-  <li>Übermittlung der Daten per WLAN an ein Backend</li>
-  <li>Analyse und Visualisierung der Daten im Webinterface</li>
-  <li>Aufbau eines modularen Systems (Sensor, Verarbeitung, Anzeige)</li>
-</ul>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Fertigung</h3>
+            <p>
+              Entwicklung, Aufbau und Integration der Komponenten – mit Fokus auf Robustheit und Praxistauglichkeit.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Qualität & Test</h3>
+            <p>
+              Iteratives Testen mit Prototypen: Funktion, Stabilität und Datengüte werden laufend geprüft.
+            </p>
+          </article>
+        </div>
+
+        <div class="media-grid">
+          <figure class="media">
+            <img src="assets/prozess.png" alt="Prozess-Übersicht" loading="lazy" width="1200" height="800" />
+            <figcaption>Prozess</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/kalkulation.png" alt="Kalkulation / Kostenübersicht" loading="lazy" width="1200" height="800" />
+            <figcaption>Kalkulation</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
+    <!-- PROTOTYP -->
+    <section class="section section--alt" id="prototyp">
+      <div class="container">
+        <div class="section__head">
+          <h2>Prototyp</h2>
+          <p>Aktueller Stand aus dem Feld: Aufbau, Tests und Live-Eindrücke.</p>
+        </div>
 
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__left">
-      <strong>MVT 25</strong> · Projekt-Dokumentation
-      <div class="muted">Modernisierte GitHub-Pages-Seite · Assets aus <code>/assets</code></div>
-    </div>
-    <div class="footer__right">
-      <a href="pages/dokumentation.html">Docs</a>
-      <a href="pages/team.html">Team</a>
-      <a href="pages/downloads.html">Downloads</a>
-    </div>
-  </div>
-</footer>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Status</h3>
+            <ul class="list">
+              <li>Prototyp gebaut</li>
+              <li>Grundfunktionen getestet</li>
+              <li>Praxisnahe Iterationen geplant</li>
+            </ul>
+          </article>
 
+          <article class="card">
+            <h3>Nächste Schritte</h3>
+            <ul class="list">
+              <li>Robustheit & Montage optimieren</li>
+              <li>UX/Workflow verfeinern</li>
+              <li>Pilotbetrieb / Feldtest ausbauen</li>
+            </ul>
+          </article>
+        </div>
 
+        <div class="media-grid">
+          <figure class="media">
+            <img src="assets/prototyp-live1.png" alt="Prototyp live – Ansicht 1" loading="lazy" width="1200" height="800" />
+            <figcaption>Prototyp live 1</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/prototyp-live2.png" alt="Prototyp live – Ansicht 2" loading="lazy" width="1200" height="800" />
+            <figcaption>Prototyp live 2</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/prozess.png" alt="Prozessdarstellung / Ablauf" loading="lazy" width="1200" height="800" />
+            <figcaption>Prozessdarstellung</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section__head">
+          <h2>Team</h2>
+          <p>Die Köpfe dahinter</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card person">
+            <img src="assets/anja.jpg" alt="Anja" loading="lazy" width="600" height="600" />
+            <h3>Anja</h3>
+            <p class="muted">CHRO</p>
+          </article>
+
+          <article class="card person">
+            <img src="assets/jonas.jpg" alt="Jonas" loading="lazy" width="600" height="600" />
+            <h3>Jonas</h3>
+            <p class="muted">COO</p>
+          </article>
+
+          <article class="card person">
+            <img src="assets/peter.png" alt="Peter" loading="lazy" width="600" height="600" />
+            <h3>Peter</h3>
+            <p class="muted">CEO</p>
+          </article>
+          <article class="card person">
+            <img src="assets/flück.png" alt="Niklas" loading="lazy" width="600" height="600" />
+            <h3>Niklas</h3>
+            <p class="muted">CMO</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZAHLEN -->
+    <section class="section section--alt" id="zahlen">
+      <div class="container">
+        <div class="section__head">
+          <h2>Zahlen</h2>
+          <p></p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">25</div>
+            <div class="stat__label">MVT-25 Version</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">4</div>
+            <div class="stat__label">Tests / Iterationen</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">1</div>
+            <div class="stat__label">Prototyp-Builds</div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Print Out</h3>
+          <p></p>
+          <div class="callout__links">
+            <a class="btn btn--primary" href="assets/fact-sheet.jpg">Print Out öffnen</a>
+            <a class="btn btn--ghost" href="#top">Nach oben</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> MVT-25</p>
+        <p class="muted">
+          <a href="https://github.com/Pedda13/mvt-25-Webseite" rel="noreferrer">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
