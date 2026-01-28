@@ -7,14 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<script defer src="js/main.js"></script>
+<link rel="stylesheet" href="../css/main.css">
+<script defer src="../js/main.js"></script>
 
-<title>MVT 25 – Projekt-Dokumentation · 404</title>
+<title>MVT 25 – Projekt-Dokumentation · Downloads</title>
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="index.html" aria-label="Startseite">
+  <a class="brand" href="../index.html" aria-label="Startseite">
     <span class="brand__dot" aria-hidden="true"></span>
     <span class="brand__text">MVT&nbsp;25</span>
     <span class="brand__sub">Docs</span>
@@ -25,10 +25,10 @@
   </button>
 
   <nav class="topnav" data-topnav>
-    <a href="pages/dokumentation.html">Dokumentation</a>
-    <a href="pages/galerie.html">Galerie</a>
-    <a href="pages/team.html">Team</a>
-    <a href="pages/downloads.html">Downloads</a>
+    <a href="../pages/dokumentation.html">Dokumentation</a>
+    <a href="../pages/galerie.html">Galerie</a>
+    <a href="../pages/team.html">Team</a>
+    <a href="../pages/downloads.html">Downloads</a>
     <button class="icon-btn" data-theme-toggle aria-label="Theme wechseln" title="Theme wechseln">
       <span class="icon-btn__sun" aria-hidden="true"></span>
       <span class="icon-btn__moon" aria-hidden="true"></span>
@@ -38,15 +38,26 @@
 
 <main class="container">
   <section class="section">
-    <div class="card">
-      <div class="card__inner">
-        <h1 class="h-title" style="margin-bottom:6px">404</h1>
-        <p class="h-sub" style="margin-top:0">Diese Seite gibt’s nicht (oder noch nicht).</p>
+    <h2>Downloads</h2>
+    <p class="h-sub" style="margin-top:0">Artefakte & Dokumente aus euren vorhandenen Assets.</p>
+
+    <div class="grid3">
+      <article class="feature" style="grid-column: 1 / -1">
+        <h3 style="margin-top:0">Fact Sheet</h3>
+        <p>Preview + Download des Fact-Sheets (Bilddatei).</p>
         <div class="btnrow">
-          <a class="btn btn--primary" href="index.html">Zur Startseite →</a>
-          <a class="btn btn--ghost" href="pages/dokumentation.html">Dokumentation</a>
+          <a class="btn btn--primary" href="../assets/fact-sheet.jpg" download>Fact Sheet herunterladen →</a>
+          <a class="btn btn--ghost" href="../pages/dokumentation.html">Zur Dokumentation</a>
         </div>
-      </div>
+        <figure class="figure">
+          <img src="../assets/fact-sheet.jpg" alt="Fact Sheet">
+          <figcaption>Fact Sheet (aus euren Assets).</figcaption>
+        </figure>
+      </article>
+    </div>
+
+    <div class="notice">
+      Wenn ihr zusätzlich ein PDF exportiert oder weitere Files bereitstellt, kann ich die Seite automatisch „docs-like“ erweitern (Versionierung, Changelog, etc.).
     </div>
   </section>
 </main>
@@ -57,9 +68,9 @@
       <div class="muted">Modernisierte GitHub-Pages-Seite · Assets aus <code>/assets</code></div>
     </div>
     <div class="footer__right">
-      <a href="pages/dokumentation.html">Docs</a>
-      <a href="pages/team.html">Team</a>
-      <a href="pages/downloads.html">Downloads</a>
+      <a href="../pages/dokumentation.html">Docs</a>
+      <a href="../pages/team.html">Team</a>
+      <a href="../pages/downloads.html">Downloads</a>
     </div>
   </div>
 </footer>

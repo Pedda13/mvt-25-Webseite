@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script defer src="../js/main.js"></script>
+
+<title>MVT 25 – Projekt-Dokumentation · Galerie</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html" aria-label="Startseite">
+    <span class="brand__dot" aria-hidden="true"></span>
+    <span class="brand__text">MVT&nbsp;25</span>
+    <span class="brand__sub">Docs</span>
+  </a>
+
+  <button class="icon-btn topbar__menu" data-menu-toggle aria-label="Menü öffnen">
+    <span class="icon-btn__bars" aria-hidden="true"></span>
+  </button>
+
+  <nav class="topnav" data-topnav>
+    <a href="../pages/dokumentation.html">Dokumentation</a>
+    <a href="../pages/galerie.html">Galerie</a>
+    <a href="../pages/team.html">Team</a>
+    <a href="../pages/downloads.html">Downloads</a>
+    <button class="icon-btn" data-theme-toggle aria-label="Theme wechseln" title="Theme wechseln">
+      <span class="icon-btn__sun" aria-hidden="true"></span>
+      <span class="icon-btn__moon" aria-hidden="true"></span>
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Galerie</h2>
+    <p class="h-sub" style="margin-top:0">
+      Klick auf ein Bild für eine große Ansicht. (Kein externes JS/CSS nötig.)
+    </p>
+
+    <div class="gallery" aria-label="Bildergalerie">
+      <button class="thumb" data-thumb data-src="../assets/prototyp-live1.png" data-title="Prototyp – Live 1" type="button">
+  <img src="../assets/prototyp-live1.png" alt="Prototyp – Live 1">
+  <div class="thumb__cap">Prototyp – Live 1</div>
+</button>
+<button class="thumb" data-thumb data-src="../assets/prototyp-live2.png" data-title="Prototyp – Live 2" type="button">
+  <img src="../assets/prototyp-live2.png" alt="Prototyp – Live 2">
+  <div class="thumb__cap">Prototyp – Live 2</div>
+</button>
+<button class="thumb" data-thumb data-src="../assets/prozess.png" data-title="Prozessdiagramm" type="button">
+  <img src="../assets/prozess.png" alt="Prozessdiagramm">
+  <div class="thumb__cap">Prozessdiagramm</div>
+</button>
+<button class="thumb" data-thumb data-src="../assets/kalkulation.png" data-title="Kalkulation" type="button">
+  <img src="../assets/kalkulation.png" alt="Kalkulation">
+  <div class="thumb__cap">Kalkulation</div>
+</button>
+<button class="thumb" data-thumb data-src="../assets/3d-modell.jpg" data-title="3D-Modell" type="button">
+  <img src="../assets/3d-modell.jpg" alt="3D-Modell">
+  <div class="thumb__cap">3D-Modell</div>
+</button>
+<button class="thumb" data-thumb data-src="../assets/ki-bild.jpg" data-title="KI-Bild" type="button">
+  <img src="../assets/ki-bild.jpg" alt="KI-Bild">
+  <div class="thumb__cap">KI-Bild</div>
+</button>
+<button class="thumb" data-thumb data-src="../assets/fact-sheet.jpg" data-title="Fact Sheet" type="button">
+  <img src="../assets/fact-sheet.jpg" alt="Fact Sheet">
+  <div class="thumb__cap">Fact Sheet</div>
+</button>
+    </div>
+  </section>
+
+  <dialog class="dialog" data-lightbox>
+    <div class="dialog__bar">
+      <strong data-lightbox-cap>Bild</strong>
+      <button class="icon-btn" data-close aria-label="Schliessen">✕</button>
+    </div>
+    <div class="dialog__body">
+      <img src="" alt="">
+    </div>
+  </dialog>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <strong>MVT 25</strong> · Projekt-Dokumentation
+      <div class="muted">Modernisierte GitHub-Pages-Seite · Assets aus <code>/assets</code></div>
+    </div>
+    <div class="footer__right">
+      <a href="../pages/dokumentation.html">Docs</a>
+      <a href="../pages/team.html">Team</a>
+      <a href="../pages/downloads.html">Downloads</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

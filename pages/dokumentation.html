@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script defer src="../js/main.js"></script>
+
+<title>MVT 25 – Projekt-Dokumentation · Dokumentation</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html" aria-label="Startseite">
+    <span class="brand__dot" aria-hidden="true"></span>
+    <span class="brand__text">MVT&nbsp;25</span>
+    <span class="brand__sub">Docs</span>
+  </a>
+
+  <button class="icon-btn topbar__menu" data-menu-toggle aria-label="Menü öffnen">
+    <span class="icon-btn__bars" aria-hidden="true"></span>
+  </button>
+
+  <nav class="topnav" data-topnav>
+    <a href="../pages/dokumentation.html">Dokumentation</a>
+    <a href="../pages/galerie.html">Galerie</a>
+    <a href="../pages/team.html">Team</a>
+    <a href="../pages/downloads.html">Downloads</a>
+    <button class="icon-btn" data-theme-toggle aria-label="Theme wechseln" title="Theme wechseln">
+      <span class="icon-btn__sun" aria-hidden="true"></span>
+      <span class="icon-btn__moon" aria-hidden="true"></span>
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="split">
+    <aside class="sidebar" data-sidebar aria-label="Dokumentations-Navigation">
+      <div class="sidebar__head">
+        <strong>Inhalt</strong>
+        <span class="badge" style="margin:0"><i aria-hidden="true"></i> Scroll</span>
+      </div>
+      <div class="sidebar__body">
+        <a href="#ueberblick">Überblick</a>
+        <a href="#ziel">Ziel & Anforderungen</a>
+        <a href="#architektur">Architektur (High-Level)</a>
+        <a href="#prozess">Prozess</a>
+        <a href="#kalkulation">Kalkulation</a>
+        <a href="#modell">3D-Modell</a>
+        <a href="#prototyp">Prototyping</a>
+        <a href="#tests">Tests & Erkenntnisse</a>
+        <a href="#naechste">Nächste Schritte</a>
+      </div>
+    </aside>
+
+    <article class="article">
+      <div class="article__inner">
+        <h1>Dokumentation</h1>
+        <p>
+          Diese Seite ist bewusst <strong>docs-mässig</strong> aufgebaut: klare Struktur, Visuals, und schnelle Navigation.
+          Ergänze/ersetze Texte nach Bedarf.
+        </p>
+
+        <div class="callout">
+          <strong>Hinweis:</strong> Teamfoto-Asset wurde auf einen sicheren Dateinamen umgestellt:
+          <code>flueck.png</code> (ohne Umlaut).
+        </div>
+
+        <h2 id="ueberblick">Überblick</h2>
+        <p>
+          Kurzbeschreibung eures Projekts: Problem, Kontext, Lösungsidee, Zielgruppe.
+          (Hier bitte euren finalen Text einsetzen.)
+        </p>
+
+        <figure class="figure">
+          <img src="../assets/ki-bild.jpg" alt="KI Bild – Visualisierung des Konzepts">
+          <figcaption>KI-Bild als Visual für Konzept/Use-Case.</figcaption>
+        </figure>
+
+        <h2 id="ziel">Ziel & Anforderungen</h2>
+        <p>
+          Beschreibe die wichtigsten Anforderungen: Muss/Kann, technische Constraints, UX, Performance, Kosten.
+        </p>
+
+        <table class="table" aria-label="Beispiel Anforderungen">
+          <thead>
+            <tr><th>Kategorie</th><th>Anforderung</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Funktional</td><td>Kernfunktion: (bitte ausfüllen)</td><td>✅</td></tr>
+            <tr><td>UX</td><td>Einfach bedienbar / klare UI</td><td>✅</td></tr>
+            <tr><td>Technik</td><td>Dokumentation & Nachvollziehbarkeit</td><td>✅</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="architektur">Architektur (High-Level)</h2>
+        <p>
+          High-Level Architektur: Komponenten, Datenfluss, Schnittstellen, verwendete Tools.
+        </p>
+
+        <div class="callout">
+          Tipp: Wenn ihr Code-Snippets wollt, könnt ihr <code>&lt;pre&gt;&lt;code&gt;</code> verwenden.
+          (Copy-Buttons können wir bei Bedarf nachrüsten.)
+        </div>
+
+        <h2 id="prozess">Prozess</h2>
+        <p>Projektablauf, Meilensteine, Iterationen, Entscheidungsgrundlagen.</p>
+
+        <figure class="figure">
+          <img src="../assets/prozess.png" alt="Prozessdiagramm">
+          <figcaption>Prozess (aus euren Assets).</figcaption>
+        </figure>
+
+        <h2 id="kalkulation">Kalkulation</h2>
+        <p>Kosten-/Zeitabschätzung, Material, Aufwand, Risikopuffer.</p>
+
+        <figure class="figure">
+          <img src="../assets/kalkulation.png" alt="Kalkulation">
+          <figcaption>Kalkulation (aus euren Assets).</figcaption>
+        </figure>
+
+        <h2 id="modell">3D-Modell</h2>
+        <p>Beschreibung des 3D-Modells, verwendete Software, Export, Besonderheiten.</p>
+
+        <figure class="figure">
+          <img src="../assets/3d-modell.jpg" alt="3D-Modell">
+          <figcaption>3D-Modell (aus euren Assets).</figcaption>
+        </figure>
+
+        <h2 id="prototyp">Prototyping</h2>
+        <p>Fotos, Iterationen, Setup, Probleme & Fixes.</p>
+
+        <div class="grid3" style="margin-top:12px">
+          <figure class="figure" style="margin:0">
+            <img src="../assets/prototyp-live1.png" alt="Prototyp Live 1">
+            <figcaption>Prototyp – Live 1</figcaption>
+          </figure>
+          <figure class="figure" style="margin:0">
+            <img src="../assets/prototyp-live2.png" alt="Prototyp Live 2">
+            <figcaption>Prototyp – Live 2</figcaption>
+          </figure>
+          <figure class="figure" style="margin:0">
+            <img src="../assets/fact-sheet.jpg" alt="Fact Sheet">
+            <figcaption>Fact Sheet (Preview)</figcaption>
+          </figure>
+        </div>
+
+        <h2 id="tests">Tests & Erkenntnisse</h2>
+        <p>
+          Welche Tests wurden gemacht? Was hat funktioniert, was nicht, welche Learnings sind wichtig?
+        </p>
+
+        <h2 id="naechste">Nächste Schritte</h2>
+        <p>
+          Backlog/ToDos, offene Punkte, was als nächstes verbessert wird.
+        </p>
+
+        <div class="btnrow">
+          <a class="btn btn--primary" href="../pages/galerie.html">Zur Galerie →</a>
+          <a class="btn btn--ghost" href="../pages/team.html">Zum Team</a>
+        </div>
+
+      </div>
+    </article>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <strong>MVT 25</strong> · Projekt-Dokumentation
+      <div class="muted">Modernisierte GitHub-Pages-Seite · Assets aus <code>/assets</code></div>
+    </div>
+    <div class="footer__right">
+      <a href="../pages/dokumentation.html">Docs</a>
+      <a href="../pages/team.html">Team</a>
+      <a href="../pages/downloads.html">Downloads</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
