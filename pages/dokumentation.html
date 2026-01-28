@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="de">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<title>MVT 25 – Projekt-Dokumentation · Dokumentation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/main.css">
-<script defer src="../js/main.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<script defer src="js/main.js"></script>
 
-<title>MVT 25 – Projekt-Dokumentation · Dokumentation</title>
+<meta name="description" content="MVT 25 – moderne, docs-mässige Projektseite mit Galerie, Team und Downloads.">
+
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="../index.html" aria-label="Startseite">
+  <a class="brand" href="index.html" aria-label="Startseite">
     <span class="brand__dot" aria-hidden="true"></span>
     <span class="brand__text">MVT&nbsp;25</span>
     <span class="brand__sub">Docs</span>
@@ -25,10 +28,10 @@
   </button>
 
   <nav class="topnav" data-topnav>
-    <a href="../pages/dokumentation.html">Dokumentation</a>
-    <a href="../pages/galerie.html">Galerie</a>
-    <a href="../pages/team.html">Team</a>
-    <a href="../pages/downloads.html">Downloads</a>
+    <a href="pages/dokumentation.html">Dokumentation</a>
+    <a href="pages/galerie.html">Galerie</a>
+    <a href="pages/team.html">Team</a>
+    <a href="pages/downloads.html">Downloads</a>
     <button class="icon-btn" data-theme-toggle aria-label="Theme wechseln" title="Theme wechseln">
       <span class="icon-btn__sun" aria-hidden="true"></span>
       <span class="icon-btn__moon" aria-hidden="true"></span>
@@ -37,136 +40,199 @@
 </header>
 
 <main class="container">
-  <div class="split">
-    <aside class="sidebar" data-sidebar aria-label="Dokumentations-Navigation">
-      <div class="sidebar__head">
-        <strong>Inhalt</strong>
-        <span class="badge" style="margin:0"><i aria-hidden="true"></i> Scroll</span>
+<div class="split">
+  <aside class="sidebar" data-sidebar aria-label="Dokumentations-Navigation">
+    <div class="sidebar__head">
+      <strong>Inhalt</strong>
+      <span class="badge" style="margin:0"><i aria-hidden="true"></i> Docs</span>
+    </div>
+    <div class="sidebar__body">
+      <a href="#ueberblick">Überblick</a>
+      <a href="#auftrag">Auftrag</a>
+      <a href="#stack">Technologie-Stack</a>
+      <a href="#architektur">Architektur & Datenfluss</a>
+      <a href="#prozess">Vorgehen & Phasen</a>
+      <a href="#realisierung">Realisierung</a>
+      <a href="#kosten">Mittelbedarf</a>
+      <a href="#tests">Tests & Abgleich</a>
+      <a href="#fazit">Fazit</a>
+    </div>
+  </aside>
+
+  <article class="article">
+    <div class="article__inner">
+      <h1>Dokumentation</h1>
+      <p>
+        Diese Dokumentation ist aus eurem <strong>Schlussbericht</strong> in eine web-taugliche, gut bewertbare Struktur
+        übertragen (kurz, klar, nachvollziehbar).
+      </p>
+
+      <h2 id="ueberblick">Überblick</h2>
+      <p><strong>Kontext:</strong> Das Projekt MVT-25 wurde als schulisches Projekt im Rahmen der Informatikausbildung an der gibb Bern durchgeführt. Es fand in einer strukturierten Lernumgebung mit professioneller Begleitung statt. Die Projektlaufzeit betrug ca. 4 Monate. Die Durchführung erfolgte in einem kleinen Projektteam mit vier Mitgliedern.</p>
+      <p><strong>Thematik:</strong> Entwicklung eines kostengünstigen Prototyps zur Erkennung von abgegebenen Schüssen bei Airsoft-, Paintball- und Trainingswaffen. Das System soll Daten in Echtzeit erfassen, verarbeiten und visuell aufbereiten.</p>
+      <p><strong>Ausgangslage:</strong> Bis dato gab es keine offene, standardisierte oder bezahlbare Lösung zur Schusserkennung.Vorhandene Systeme waren entweder manuell, zu ungenau oder sehr kostenintensiv.</p>
+
+      <figure class="figure">
+        <img src="../assets/ki-bild.jpg" alt="KI Bild – Visualisierung des Konzepts">
+        <figcaption>Konzept-Visualisierung (aus euren Assets).</figcaption>
+      </figure>
+
+      <h2 id="auftrag">Auftrag</h2>
+      <p>Die Aufgabenstellung wurde im Projekt so definiert:</p>
+      <ul>
+  <li>Erfassen von Schussdaten mit Sensorik (Vibration, Bewegung, Lautstärke)</li>
+  <li>Übermittlung der Daten per WLAN an ein Backend</li>
+  <li>Analyse und Visualisierung der Daten im Webinterface</li>
+  <li>Aufbau eines modularen Systems (Sensor, Verarbeitung, Anzeige)</li>
+</ul>
+
+      <div class="callout">
+        <strong>Modularer Aufbau:</strong> Sensor (Erfassung) → Verarbeitung/Backend → Anzeige/Dashboard.
       </div>
-      <div class="sidebar__body">
-        <a href="#ueberblick">Überblick</a>
-        <a href="#ziel">Ziel & Anforderungen</a>
-        <a href="#architektur">Architektur (High-Level)</a>
-        <a href="#prozess">Prozess</a>
-        <a href="#kalkulation">Kalkulation</a>
-        <a href="#modell">3D-Modell</a>
-        <a href="#prototyp">Prototyping</a>
-        <a href="#tests">Tests & Erkenntnisse</a>
-        <a href="#naechste">Nächste Schritte</a>
+
+      <h2 id="stack">Technologie-Stack</h2>
+      <p>Verwendete Mittel und Methoden (kompakt):</p>
+
+      <h3>Hardware</h3>
+      <ul>
+  <li>Raspberry Pi Pico W, Raspberry Pi 5, Grove-Sensoren</li>
+</ul>
+      <h3>Software</h3>
+      <ul>
+  <li>MicroPython, Python, FastAPI, Nginx, Apache, Flask, InfluxDB, Grafana</li>
+</ul>
+      <h3>Projektmethode & Tools</h3>
+      <ul>
+  <li>HERMES-gibb</li>
+  <li>Git, OpenProject, VSCode, Thonny</li>
+</ul>
+
+      <h3>Vorkenntnisse</h3>
+      <ul>
+  <li>Grundlagen in Python und Netzwerktechnik</li>
+  <li>Erste Erfahrungen mit MicroPython</li>
+</ul>
+      <h3>Vorarbeiten</h3>
+      <ul>
+  <li>Studium bestehender IoT-Projekte</li>
+  <li>Evaluation geeigneter Sensorik und Hardwareplattformen</li>
+</ul>
+
+      <h2 id="architektur">Architektur & Datenfluss</h2>
+      <p>
+        Technisch folgt das System einem schlanken IoT-Workflow: Der Sensor erfasst Events, sendet sie per WLAN an das Backend,
+        dort werden sie persistiert und in einem Web-UI visualisiert.
+      </p>
+
+      <table class="table" aria-label="Datenfluss Übersicht">
+        <thead>
+          <tr><th>Schritt</th><th>Komponente</th><th>Ergebnis</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Raspberry Pi Pico W + Sensorik</td><td>Schuss-/Bewegungsdaten werden erfasst</td></tr>
+          <tr><td>2</td><td>WLAN-Übertragung</td><td>Events gelangen in Echtzeit ins Backend</td></tr>
+          <tr><td>3</td><td>FastAPI auf Raspberry Pi 5</td><td>API-Endpunkte nehmen Events entgegen</td></tr>
+          <tr><td>4</td><td>InfluxDB</td><td>Daten werden gespeichert (Zeitreihen)</td></tr>
+          <tr><td>5</td><td>Web-Frontend / Dashboard</td><td>Live-Darstellung & Auswertung</td></tr>
+        </tbody>
+      </table>
+
+      <figure class="figure">
+        <img src="../assets/3d-modell.jpg" alt="3D-Modell">
+        <figcaption>3D-Modell (aus euren Assets).</figcaption>
+      </figure>
+
+      <h2 id="prozess">Vorgehen & Phasen</h2>
+      <p>Projektmethode und Arbeitsweise:</p>
+      <ul>
+  <li>Strukturierte Planung und Organisation über OpenProject</li>
+  <li>Iterative Entwicklung: Sensorik und Software wurden parallel entwickelt</li>
+  <li>Wöchentliche Teammeetings und Statusabgleiche</li>
+</ul>
+      <p>Projektphasen (HERMES-gibb orientiert):</p>
+      <ul>
+  <li>Initialisierung: Projektstart, Zieldefinition, Umfeld</li>
+  <li>Konzept: Architekturentwurf, Anforderungen, Variantenbewertung</li>
+  <li>Realisierung: Programmierung Sensor, API, Frontend</li>
+  <li>Test: Integrationstests, Funktionstest, Systemtest</li>
+  <li>Abschluss: Dokumentation, Abnahme, Reflexion</li>
+</ul>
+
+      <figure class="figure">
+        <img src="../assets/prozess.png" alt="Prozessdiagramm">
+        <figcaption>Prozess (aus euren Assets).</figcaption>
+      </figure>
+
+      <h3>Projektorganisation</h3>
+      <ul>
+  <li>Projektleitung: Peter-Paul Suter</li>
+  <li>Entwicklung Sensorik: Timotheus Niehus</li>
+  <li>Backend/API/3D-Druck: Jonas Rieder</li>
+  <li>Visualisierung/Frontend: Niklas Flück</li>
+</ul>
+      <p class="notice">Hinweis: Auf der Team-Seite sind nur Personen aufgeführt, zu denen auch Bilder in <code>/assets</code> vorhanden sind.</p>
+
+      <h2 id="realisierung">Realisierung</h2>
+      <p>Wesentliche Umsetzungspunkte:</p>
+      <ul>
+  <li>Implementierung der Sensorik in MicroPython</li>
+  <li>FastAPI-Server auf Raspberry Pi 5 mit Endpunkten für Events</li>
+  <li>Datenpersistenz über InfluxDB</li>
+  <li>Frontend mit HTML/JS, Darstellung der Daten in Echtzeitdiagrammen</li>
+</ul>
+
+      <div class="callout">
+        <strong>Kernidee:</strong> Einfache Endpunkte für Events, Time-Series Storage, und eine webbasierte Visualisierung in (nahezu) Echtzeit.
       </div>
-    </aside>
 
-    <article class="article">
-      <div class="article__inner">
-        <h1>Dokumentation</h1>
-        <p>
-          Diese Seite ist bewusst <strong>docs-mässig</strong> aufgebaut: klare Struktur, Visuals, und schnelle Navigation.
-          Ergänze/ersetze Texte nach Bedarf.
-        </p>
-
-        <div class="callout">
-          <strong>Hinweis:</strong> Teamfoto-Asset wurde auf einen sicheren Dateinamen umgestellt:
-          <code>flueck.png</code> (ohne Umlaut).
-        </div>
-
-        <h2 id="ueberblick">Überblick</h2>
-        <p>
-          Kurzbeschreibung eures Projekts: Problem, Kontext, Lösungsidee, Zielgruppe.
-          (Hier bitte euren finalen Text einsetzen.)
-        </p>
-
-        <figure class="figure">
-          <img src="../assets/ki-bild.jpg" alt="KI Bild – Visualisierung des Konzepts">
-          <figcaption>KI-Bild als Visual für Konzept/Use-Case.</figcaption>
+      <div class="grid3" style="margin-top:12px">
+        <figure class="figure" style="margin:0">
+          <img src="../assets/prototyp-live1.png" alt="Prototyp Live 1">
+          <figcaption>Prototyp – Live 1</figcaption>
         </figure>
-
-        <h2 id="ziel">Ziel & Anforderungen</h2>
-        <p>
-          Beschreibe die wichtigsten Anforderungen: Muss/Kann, technische Constraints, UX, Performance, Kosten.
-        </p>
-
-        <table class="table" aria-label="Beispiel Anforderungen">
-          <thead>
-            <tr><th>Kategorie</th><th>Anforderung</th><th>Status</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Funktional</td><td>Kernfunktion: (bitte ausfüllen)</td><td>✅</td></tr>
-            <tr><td>UX</td><td>Einfach bedienbar / klare UI</td><td>✅</td></tr>
-            <tr><td>Technik</td><td>Dokumentation & Nachvollziehbarkeit</td><td>✅</td></tr>
-          </tbody>
-        </table>
-
-        <h2 id="architektur">Architektur (High-Level)</h2>
-        <p>
-          High-Level Architektur: Komponenten, Datenfluss, Schnittstellen, verwendete Tools.
-        </p>
-
-        <div class="callout">
-          Tipp: Wenn ihr Code-Snippets wollt, könnt ihr <code>&lt;pre&gt;&lt;code&gt;</code> verwenden.
-          (Copy-Buttons können wir bei Bedarf nachrüsten.)
-        </div>
-
-        <h2 id="prozess">Prozess</h2>
-        <p>Projektablauf, Meilensteine, Iterationen, Entscheidungsgrundlagen.</p>
-
-        <figure class="figure">
-          <img src="../assets/prozess.png" alt="Prozessdiagramm">
-          <figcaption>Prozess (aus euren Assets).</figcaption>
+        <figure class="figure" style="margin:0">
+          <img src="../assets/prototyp-live2.png" alt="Prototyp Live 2">
+          <figcaption>Prototyp – Live 2</figcaption>
         </figure>
-
-        <h2 id="kalkulation">Kalkulation</h2>
-        <p>Kosten-/Zeitabschätzung, Material, Aufwand, Risikopuffer.</p>
-
-        <figure class="figure">
+        <figure class="figure" style="margin:0">
           <img src="../assets/kalkulation.png" alt="Kalkulation">
-          <figcaption>Kalkulation (aus euren Assets).</figcaption>
+          <figcaption>Kalkulation (Preview)</figcaption>
         </figure>
-
-        <h2 id="modell">3D-Modell</h2>
-        <p>Beschreibung des 3D-Modells, verwendete Software, Export, Besonderheiten.</p>
-
-        <figure class="figure">
-          <img src="../assets/3d-modell.jpg" alt="3D-Modell">
-          <figcaption>3D-Modell (aus euren Assets).</figcaption>
-        </figure>
-
-        <h2 id="prototyp">Prototyping</h2>
-        <p>Fotos, Iterationen, Setup, Probleme & Fixes.</p>
-
-        <div class="grid3" style="margin-top:12px">
-          <figure class="figure" style="margin:0">
-            <img src="../assets/prototyp-live1.png" alt="Prototyp Live 1">
-            <figcaption>Prototyp – Live 1</figcaption>
-          </figure>
-          <figure class="figure" style="margin:0">
-            <img src="../assets/prototyp-live2.png" alt="Prototyp Live 2">
-            <figcaption>Prototyp – Live 2</figcaption>
-          </figure>
-          <figure class="figure" style="margin:0">
-            <img src="../assets/fact-sheet.jpg" alt="Fact Sheet">
-            <figcaption>Fact Sheet (Preview)</figcaption>
-          </figure>
-        </div>
-
-        <h2 id="tests">Tests & Erkenntnisse</h2>
-        <p>
-          Welche Tests wurden gemacht? Was hat funktioniert, was nicht, welche Learnings sind wichtig?
-        </p>
-
-        <h2 id="naechste">Nächste Schritte</h2>
-        <p>
-          Backlog/ToDos, offene Punkte, was als nächstes verbessert wird.
-        </p>
-
-        <div class="btnrow">
-          <a class="btn btn--primary" href="../pages/galerie.html">Zur Galerie →</a>
-          <a class="btn btn--ghost" href="../pages/team.html">Zum Team</a>
-        </div>
-
       </div>
-    </article>
-  </div>
+
+      <h2 id="kosten">Mittelbedarf</h2>
+      <p>Zusammenfassung des Mittelbedarfs (aus dem Bericht):</p>
+      <ul>
+  <li>Hardware: \~ CHF 150.- (detailliert):</li>
+  <li>Raspberry Pi Pico W: CHF 10.–</li>
+  <li>Raspberry Pi 5 (2 GB): CHF 60.–</li>
+  <li>3x MPU6050 Sensoren: CHF 18.– (CHF 6.– pro Stück)</li>
+  <li>Grove-Kabel und Steckverbindungen: CHF 12.–</li>
+  <li>Diverse Breadboards, Steckleisten: CHF 10.–</li>
+  <li>Netzteile, Micro-USB Kabel, SD-Karte: CHF 20.–</li>
+  <li>Ersatzsensoren für Notfall-Demo: CHF 20.–</li>
+  <li>Software: Open Source, keine Lizenzkosten</li>
+</ul>
+
+      <h2 id="tests">Tests & Abgleich</h2>
+      <p><strong>Testphase:</strong> Die Testphase konnte nicht vollständig abgeschlossen werden, da 2 der 3 Sensoren beim finalen Einbau beschädigt wurden. Es wurden dennoch mit einem Ersatzsensor sowie zwei Hilfssensoren verschiedene Tests durchgeführt. Die Schusserkennung konnte aufgrund fehlender Kalibrierungsdaten der Ersatzsensoren nicht abschließend evaluiert werden.</p>
+      <p><strong>Vergleich Ist/Soll:</strong> Der Ist-Zustand entspricht in Teilen dem Soll. Zwar konnten die Software-Komponenten wie geplant umgesetzt werden, jedoch kam es beim Testing zu einem kritischen Problem: Zwei der drei Sensoren wurden durch versehentliche Fehlspannungen irreparabel beschädigt. Aus Zeit- und Ressourcenmangel war eine Ersatzbeschaffung nicht möglich. Um dennoch eine Präsentation mit Funktionsnachweis durchführen zu können, wurde improvisiert: Zwei alternative Bewegungssensoren wurden verwendet, und der Fokus lag bei der Demonstration auf dem funktionierenden Datenfluss vom Pico zum Backend und der Visualisierung im Webinterface. Das Ziel, die komplette Lösung projektgetreu umzusetzen, wurde dadurch verfehlt, jedoch konnte der funktionale Aufbau erfolgreich nachgewiesen werden.</p>
+
+      <h2 id="fazit">Fazit</h2>
+      <p>Das Projekt war technisch, organisatorisch und methodisch eine wertvolle Lernerfahrung. Der Prototyp ist funktionsfähig und ausbaufähig. Besonders hervorzuheben ist die gute Zusammenarbeit und strukturierte Umsetzung trotz begrenzter Mittel.</p>
+      <p class="muted">Das Team konnte die gesteckten Ziele erreichen. Besonders das Zusammenspiel aus Embedded-Entwicklung, Netzwerktechnik und Webentwicklung führte zu einem praxisnahen Produkt. Die gewählte Hardware war ideal und wird auch in künftigen Weiterentwicklungen genutzt werden.</p>
+
+      <div class="btnrow">
+        <a class="btn btn--primary" href="galerie.html">Zur Galerie →</a>
+        <a class="btn btn--ghost" href="downloads.html">Downloads</a>
+        <a class="btn btn--ghost" href="team.html">Team</a>
+      </div>
+    </div>
+  </article>
+</div>
+
 </main>
+
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__left">
@@ -174,12 +240,13 @@
       <div class="muted">Modernisierte GitHub-Pages-Seite · Assets aus <code>/assets</code></div>
     </div>
     <div class="footer__right">
-      <a href="../pages/dokumentation.html">Docs</a>
-      <a href="../pages/team.html">Team</a>
-      <a href="../pages/downloads.html">Downloads</a>
+      <a href="pages/dokumentation.html">Docs</a>
+      <a href="pages/team.html">Team</a>
+      <a href="pages/downloads.html">Downloads</a>
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>

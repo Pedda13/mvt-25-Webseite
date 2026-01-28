@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
@@ -12,6 +13,8 @@
 <script defer src="js/main.js"></script>
 
 <meta name="description" content="MVT 25 – moderne, docs-mässige Projektseite mit Galerie, Team und Downloads.">
+
+<meta name="description" content="MVT 25 – Docs-mässige Projektdokumentation (Sensorik, Backend, Visualisierung).">
 </head>
 <body>
 <header class="topbar">
@@ -42,16 +45,15 @@
     <div class="hero__grid">
       <div class="card">
         <div class="card__inner">
-          <h1 class="h-title">Projekt-Dokumentation · MVT&nbsp;25</h1>
-          <p class="h-sub">
-            Eine moderne, gut strukturierte <strong>Docs-Seite</strong> für euer Projekt – mit klarer Navigation,
-            Doku-Abschnitten, Galerie und Downloads. Alles basiert auf euren bestehenden Assets.
-          </p>
+          <h1 class="h-title">MVT&nbsp;25 · Projekt-Dokumentation</h1>
+          <p class="h-sub"><strong>Thematik:</strong> Entwicklung eines kostengünstigen Prototyps zur Erkennung von abgegebenen Schüssen bei Airsoft-, Paintball- und Trainingswaffen. Das System soll Daten in Echtzeit erfassen, verarbeiten und visuell aufbereiten.</p>
+          <p class="h-sub" style="margin-top:-6px"><strong>Ausgangslage:</strong> Bis dato gab es keine offene, standardisierte oder bezahlbare Lösung zur Schusserkennung.Vorhandene Systeme waren entweder manuell, zu ungenau oder sehr kostenintensiv.</p>
 
-          <div class="badges" aria-label="Highlights">
-            <span class="badge"><i aria-hidden="true"></i> Strukturierte Docs</span>
-            <span class="badge"><i aria-hidden="true"></i> Galerie mit Lightbox</span>
-            <span class="badge"><i aria-hidden="true"></i> Dark/Light Theme</span>
+          <div class="badges" aria-label="Kurzinfo">
+            <span class="badge"><i aria-hidden="true"></i> Raspberry Pi Pico W</span>
+            <span class="badge"><i aria-hidden="true"></i> FastAPI</span>
+            <span class="badge"><i aria-hidden="true"></i> InfluxDB</span>
+            <span class="badge"><i aria-hidden="true"></i> Dashboard</span>
           </div>
 
           <div class="btnrow">
@@ -63,31 +65,16 @@
           </div>
 
           <div class="notice" style="margin-top:14px">
-            Tipp: Diese Seite ist GitHub-Pages-ready. Inhalte kannst du in <code>/pages/dokumentation.html</code> sehr einfach erweitern.
+            Diese Seite ist „docs-mässig“ aufgebaut: klare Kapitel, nachvollziehbarer Datenfluss, Ergebnisse & Reflexion.
           </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card__inner">
-          <div class="kpi" role="list" aria-label="Projekt-Snapshots">
-            <div class="kpi__item" role="listitem">
-              <div class="kpi__num">Docs</div>
-              <div class="kpi__label">Sidebar + Scrollspy</div>
-            </div>
-            <div class="kpi__item" role="listitem">
-              <div class="kpi__num">Assets</div>
-              <div class="kpi__label">aus /assets (unverändert)</div>
-            </div>
-            <div class="kpi__item" role="listitem">
-              <div class="kpi__num">Modern</div>
-              <div class="kpi__label">Cards, Layout, UX</div>
-            </div>
-          </div>
-
-          <figure class="figure" style="margin-top:14px">
-            <img src="assets/ki-bild.jpg" alt="KI Bild – Visualisierung">
-            <figcaption>Hero-Visual (aus euren Assets).</figcaption>
+          <figure class="figure" style="margin:0">
+            <img src="assets/prozess.png" alt="Prozessdiagramm">
+            <figcaption>Projektprozess (aus euren Assets).</figcaption>
           </figure>
         </div>
       </div>
@@ -95,41 +82,42 @@
   </section>
 
   <section class="section">
-    <h2>Was ist drin?</h2>
+    <h2>Inhalt</h2>
     <div class="grid3">
       <article class="feature">
-        <h3>Dokumentation</h3>
-        <p>Gliederung, Abschnitte, Bilder/Diagramme und eine Sidebar für schnelles Navigieren.</p>
+        <h3>Überblick</h3>
+        <p>Kontext, Ausgangslage, Ziel und Aufgabenstellung.</p>
+        <p><a href="pages/dokumentation.html#ueberblick">Zum Kapitel →</a></p>
       </article>
       <article class="feature">
-        <h3>Galerie</h3>
-        <p>Prototyp-Fotos, Prozess & 3D-Modell – als Grid mit Klick-Lichtbox.</p>
+        <h3>Architektur</h3>
+        <p>Datenfluss Sensor → Backend → Speicherung → Visualisierung.</p>
+        <p><a href="pages/dokumentation.html#architektur">Zum Kapitel →</a></p>
       </article>
       <article class="feature">
-        <h3>Team & Downloads</h3>
-        <p>Saubere Team-Karten + Fact-Sheet als Preview/Download.</p>
+        <h3>Ergebnisse</h3>
+        <p>Realisierung, Mittelbedarf, Tests, Ist/Soll und Fazit.</p>
+        <p><a href="pages/dokumentation.html#tests">Zum Kapitel →</a></p>
       </article>
     </div>
   </section>
 
   <section class="section">
-    <h2>Schnellstart</h2>
-    <div class="grid3">
-      <article class="feature">
-        <h3>1) Inhalt anpassen</h3>
-        <p>Öffne <code>/pages/dokumentation.html</code> und ergänze Abschnitte (Texte, Tabellen, Bilder).</p>
-      </article>
-      <article class="feature">
-        <h3>2) Assets verwenden</h3>
-        <p>Alle Bilder liegen in <code>/assets</code>. Pfade sind bereits korrekt gesetzt.</p>
-      </article>
-      <article class="feature">
-        <h3>3) Deploy</h3>
-        <p>Auf GitHub Pages veröffentlichen (Root). Fertig.</p>
-      </article>
+    <h2>Aufgabenstellung (Kurzfassung)</h2>
+    <div class="card">
+      <div class="card__inner">
+        <ul>
+  <li>Erfassen von Schussdaten mit Sensorik (Vibration, Bewegung, Lautstärke)</li>
+  <li>Übermittlung der Daten per WLAN an ein Backend</li>
+  <li>Analyse und Visualisierung der Daten im Webinterface</li>
+  <li>Aufbau eines modularen Systems (Sensor, Verarbeitung, Anzeige)</li>
+</ul>
+      </div>
     </div>
   </section>
 </main>
+
+
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__left">
@@ -143,6 +131,7 @@
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>
