@@ -2,143 +2,325 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MVT-25 – Digitale Schusserfassung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MVT-25: Digitale, personenspezifische Erfassung von Schussabgaben – automatisierte Munitionsverwaltung für Militär und Schiessstände." />
+
+  <title>MVT-25</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MVT-25" />
+  <meta property="og:description" content="Digitale Erfassung von Schussabgaben & automatisierte Munitionsverwaltung." />
+  <!-- Optional: og:image setzen, sobald du ein geeignetes Bild hast -->
+  <!-- <meta property="og:image" content="assets/og.webp" /> -->
+
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
+  <a class="skip" href="#projekt">Zum Inhalt springen</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">MVT-25</div>
-    <nav>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#projekt">Projekt</a></li>
-        <li><a href="#loesung">Lösung</a></li>
-        <li><a href="#prozess">Produktion</a></li>
-        <li><a href="#prototyp">Prototyp</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#zahlen">Zahlen</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Zur Startsektion">
+        <span class="brand__mark">MVT</span>
+        <span class="brand__text">MVT-25</span>
+      </a>
 
-<main>
+      <button class="nav__toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>MVT-25</h1>
-      <p class="lead">Digitale, personenspezifische Erfassung von Schussabgaben</p>
-      <p>Automatisiertes System zur Munitionsverwaltung für Militär und Schiessstände.</p>
+      <nav class="nav" id="nav" aria-label="Hauptnavigation">
+        <a class="nav__link" href="#projekt">Projekt</a>
+        <a class="nav__link" href="#loesung">Lösung</a>
+        <a class="nav__link" href="#produktion">Produktion</a>
+        <a class="nav__link" href="#prototyp">Prototyp</a>
+        <a class="nav__link" href="#team">Team</a>
+        <a class="nav__link" href="#zahlen">Zahlen</a>
+      </nav>
     </div>
-    <img src="assets/3d-modell.jpg" alt="3D Modell">
-  </div>
-</section>
+  </header>
 
-<section id="projekt" class="section">
-  <div class="container grid-2">
-    <img src="assets/ki-bild.jpg" alt="KI Visualisierung">
-    <div>
-      <h2>Projektidee</h2>
-      <p>
-        Das MVT-25 ist ein modulares Hardware- und Softwaresystem zur automatischen Erfassung
-        von Schussabgaben. Ziel ist es, manuelle und fehleranfällige Prozesse durch digitale,
-        nachvollziehbare Abläufe zu ersetzen.
-      </p>
-    </div>
-  </div>
-</section>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">Hardware · Software · Prozess</p>
+          <h1>MVT-25: Digitale Schusserfassung & Munitionsverwaltung</h1>
+          <p class="lead">
+            Automatisiertes System zur personenspezifischen Erfassung von Schussabgaben – mit nachvollziehbarer Dokumentation,
+            weniger manuellen Fehlern und klaren Auswertungen.
+          </p>
 
-<section id="loesung" class="section alt">
-  <div class="container grid-2">
-    <div>
-      <h2>Unsere Lösung</h2>
-      <ul>
-        <li>Sensor direkt an der Waffe</li>
-        <li>Automatische Datenerfassung</li>
-        <li>Zentrale Auswertung</li>
-        <li>Personenspezifische Zuordnung</li>
-      </ul>
-    </div>
-    <img src="assets/prototyp-live1.png" alt="Prototyp">
-  </div>
-</section>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#loesung">Lösung ansehen</a>
+            <a class="btn btn--ghost" href="#prototyp">Prototyp</a>
+          </div>
 
-<section id="prozess" class="section">
-  <div class="container">
-    <h2>Produktionsprozess</h2>
-    <img src="assets/prozess.png" alt="Produktionsprozess">
-    <p>
-      Der Produktionsprozess umfasst die Entwicklung, Fertigung, Montage und Endprüfung
-      der MVT-25 Komponenten. Hardware und Software werden dabei eng aufeinander abgestimmt.
-    </p>
-  </div>
-</section>
+          <ul class="mini">
+            <li>Anchor-Navigation ✓</li>
+            <li>Mobile-optimiert ✓</li>
+            <li>Saubere Struktur ✓</li>
+          </ul>
+        </div>
 
-<section id="prototyp" class="section alt">
-  <div class="container grid-2">
-    <img src="assets/prototyp-live2.png" alt="Prototyp im Einsatz">
-    <div>
-      <h2>Prototyp</h2>
-      <p>
-        Erste funktionale Prototypen wurden entwickelt und getestet. Die Bilder zeigen
-        den aktuellen Entwicklungsstand im praktischen Einsatz.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="zahlen" class="section">
-  <div class="container grid-2">
-    <div>
-      <h2>Fakten & Kalkulation</h2>
-      <p>Übersicht über Wirtschaftlichkeit und Projektkennzahlen.</p>
-    </div>
-    <img src="assets/kalkulation.png" alt="Kalkulation">
-  </div>
-  <div class="container grid-2">
-    <img src="assets/fact-sheet.jpg" alt="Fact Sheet">
-    <div>
-      <p>
-        Das Fact Sheet fasst die wichtigsten technischen und wirtschaftlichen Eckdaten
-        des Projekts kompakt zusammen.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="team" class="section alt">
-  <div class="container">
-    <h2>Team</h2>
-    <div class="grid-3">
-      <div class="card">
-        <img src="assets/jonas.jpg">
-        <p>Jonas – Antreiber</p>
+        <div class="hero__media">
+          <!-- TODO: Pfad anpassen. Falls du schon ein Keyvisual im assets-Ordner hast, hier eintragen -->
+          <img
+            src="assets/hero.jpg"
+            alt="MVT-25 – Visualisierung / Prototyp"
+            loading="eager"
+            width="1400"
+            height="1000"
+          />
+          <p class="caption">Key Visual (Bildpfad ggf. anpassen)</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="assets/peter.png">
-        <p>Peter – Spezialist</p>
-      </div>
-      <div class="card">
-        <img src="assets/flück.png">
-        <p>Niklas – Vernetzer</p>
-      </div>
-      <div class="card">
-        <img src="assets/anja.jpg" alt="Anja">
-        <p><strong>Anja</strong> – Umsetzerin</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>© MVT-25 Projekt</p>
-  </div>
-</footer>
+    <!-- PROJEKT -->
+    <section class="section" id="projekt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projekt</h2>
+          <p>
+            Kurz und klar: Worum geht’s, wer profitiert, welches Problem wird gelöst.
+          </p>
+        </div>
 
-</main>
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Problem</h3>
+            <p>Manuelle Erfassung ist fehleranfällig, zeitintensiv und schwer auditierbar.</p>
+          </article>
+          <article class="card">
+            <h3>Ziel</h3>
+            <p>Automatische, personenspezifische Erfassung von Schussabgaben mit sauberer Dokumentation.</p>
+          </article>
+          <article class="card">
+            <h3>Kontext</h3>
+            <p>Einsatz in militärischen Anwendungen und auf Schiessständen – robust & praxisnah.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LÖSUNG -->
+    <section class="section section--alt" id="loesung">
+      <div class="container">
+        <div class="section__head">
+          <h2>Unsere Lösung</h2>
+          <p>Modulares System aus Hardware & Software — Daten erfassen, nachvollziehen, auswerten.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Erfassung</h3>
+            <ul class="list">
+              <li>Personenspezifische Zuordnung</li>
+              <li>Automatische Schuss-/Ereigniserkennung</li>
+              <li>Robuste Datenerhebung</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Auswertung</h3>
+            <ul class="list">
+              <li>Übersichten & Kennzahlen</li>
+              <li>Nachvollziehbare Historie</li>
+              <li>Export/Reporting (optional)</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="media-grid">
+          <!-- TODO: Bildpfade anpassen -->
+          <figure class="media">
+            <img src="assets/loesung-1.jpg" alt="3D Modell / Konzept" loading="lazy" width="1200" height="800" />
+            <figcaption>Konzept / CAD / Visualisierung</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/loesung-2.jpg" alt="KI Visualisierung / Use Case" loading="lazy" width="1200" height="800" />
+            <figcaption>Use Case / Visualisierung</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/loesung-3.jpg" alt="User Flow / UI Skizze" loading="lazy" width="1200" height="800" />
+            <figcaption>UI / Ablauf / Dashboard</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUKTION -->
+    <section class="section" id="produktion">
+      <div class="container">
+        <div class="section__head">
+          <h2>Produktion</h2>
+          <p>Von Design → Herstellung → Qualität: transparent und nachvollziehbar.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Fertigung</h3>
+            <p>
+              Beschreibe hier kurz Material/Verfahren/Assembly – so, dass es auch Nicht-Techniker verstehen.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Qualität & Test</h3>
+            <p>
+              Welche Tests? Welche Kriterien? (z.B. Robustheit, Wiederholgenauigkeit, Umgebungsbedingungen)
+            </p>
+          </article>
+        </div>
+
+        <div class="media-grid">
+          <!-- TODO: Bildpfade anpassen -->
+          <figure class="media">
+            <img src="assets/produktion-1.jpg" alt="Produktion / Fertigungsprozess" loading="lazy" width="1200" height="800" />
+            <figcaption>Produktion / Prozess</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/produktion-2.jpg" alt="Komponenten / Assembly" loading="lazy" width="1200" height="800" />
+            <figcaption>Komponenten / Assembly</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTOTYP -->
+    <section class="section section--alt" id="prototyp">
+      <div class="container">
+        <div class="section__head">
+          <h2>Prototyp</h2>
+          <p>Was ist schon gebaut, was wurde getestet, was sind die nächsten Schritte?</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Status</h3>
+            <ul class="list">
+              <li>Prototyp gebaut</li>
+              <li>Grundfunktionen getestet</li>
+              <li>Iterationen geplant</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Nächste Schritte</h3>
+            <ul class="list">
+              <li>Stabilität/Robustheit verbessern</li>
+              <li>UX/Workflow optimieren</li>
+              <li>Pilotbetrieb / Feldtest</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="media-grid">
+          <!-- TODO: Bildpfade anpassen -->
+          <figure class="media">
+            <img src="assets/prototyp-1.jpg" alt="Prototyp Foto" loading="lazy" width="1200" height="800" />
+            <figcaption>Prototyp</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/prototyp-2.jpg" alt="Prototyp Detail" loading="lazy" width="1200" height="800" />
+            <figcaption>Detail / Aufbau</figcaption>
+          </figure>
+          <figure class="media">
+            <img src="assets/prototyp-3.jpg" alt="Kalkulation / Übersicht" loading="lazy" width="1200" height="800" />
+            <figcaption>Kalkulation / Übersicht</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section__head">
+          <h2>Team</h2>
+          <p>Kurz, sympathisch, klar: Rollen statt Roman.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Du kannst Namen/Rollen anpassen -->
+          <article class="card person">
+            <div class="person__avatar" aria-hidden="true"></div>
+            <h3>Rolle 1</h3>
+            <p class="muted">Hardware / Mechanik</p>
+          </article>
+          <article class="card person">
+            <div class="person__avatar" aria-hidden="true"></div>
+            <h3>Rolle 2</h3>
+            <p class="muted">Software / Plattform</p>
+          </article>
+          <article class="card person">
+            <div class="person__avatar" aria-hidden="true"></div>
+            <h3>Rolle 3</h3>
+            <p class="muted">Projekt / Dokumentation</p>
+          </article>
+        </div>
+
+        <!-- Optional: Teamfoto -->
+        <figure class="media media--wide">
+          <img src="assets/team.jpg" alt="Teamfoto" loading="lazy" width="1600" height="900" />
+          <figcaption>Team (Bildpfad ggf. anpassen)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ZAHLEN -->
+    <section class="section section--alt" id="zahlen">
+      <div class="container">
+        <div class="section__head">
+          <h2>Zahlen</h2>
+          <p>Ein paar harte Facts machen die Seite sofort glaubwürdiger.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">25</div>
+            <div class="stat__label">MVT-25 Version</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">X</div>
+            <div class="stat__label">Tests / Iterationen</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">Y</div>
+            <div class="stat__label">Prototyp-Builds</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">Z</div>
+            <div class="stat__label">Ziel: Zeitersparnis</div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Fact Sheet / Dokumente</h3>
+          <p>
+            Wenn du PDFs hast, verlinke sie hier (z.B. <span class="mono">assets/factsheet.pdf</span>).
+          </p>
+          <div class="callout__links">
+            <a class="btn btn--primary" href="assets/factsheet.pdf">Fact Sheet</a>
+            <a class="btn btn--ghost" href="#top">Nach oben</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> MVT-25</p>
+        <p class="muted">
+          <a href="https://github.com/Pedda13/mvt-25-Webseite" rel="noreferrer">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
